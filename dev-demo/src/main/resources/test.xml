@@ -1,0 +1,13 @@
+<!--举例-->
+<select id="getUserInfo" parameterType="hashmap" resultType="hashmap">SELECT N_USERID, C_NAME, C_SEX, N_AGE FROM T_USER
+    WHERE N_USERID IN
+    <foreach item="myItem" index="index" collection="myList" open="(" separator="," close=")">
+        #{myItem}
+    </foreach>
+</select>
+<insert>
+insert into purchase_record (id,product_name,trigger_time,username,type,record_template_id) values <foreach
+        collection="list" separator="," item="item">(
+    #{item.id},#{item.productName},#{item.triggerTime},#{item.username},#{item.type},#{item.recordTemplateId})
+</foreach> ....
+</insert>
