@@ -1,10 +1,6 @@
-package com.example.devDemo.ThreadDemo;
+package com.example.devDemo.threaddemo;
 
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
-
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
 
 public class MyThreadPoolDemo {
 

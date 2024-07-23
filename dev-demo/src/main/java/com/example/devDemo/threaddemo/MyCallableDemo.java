@@ -1,4 +1,4 @@
-package com.example.devDemo.ThreadDemo;
+package com.example.devDemo.threaddemo;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;

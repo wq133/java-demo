@@ -1,4 +1,4 @@
-package com.example.devDemo.ThreadDemo;
+package com.example.devDemo.threaddemo;
 
 public class MyThread extends Thread{
 

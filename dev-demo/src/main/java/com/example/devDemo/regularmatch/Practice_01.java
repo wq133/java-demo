@@ -1,4 +1,4 @@
-package com.example.devDemo.regularMatch;
+package com.example.devDemo.regularmatch;
 
 import java.util.ArrayList;
 import java.util.List;

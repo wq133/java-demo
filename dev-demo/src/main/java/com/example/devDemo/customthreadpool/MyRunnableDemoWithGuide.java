@@ -1,4 +1,4 @@
-package com.example.devDemo.CustomThreadPool;
+package com.example.devDemo.customthreadpool;
 
 import java.util.Date;
 
