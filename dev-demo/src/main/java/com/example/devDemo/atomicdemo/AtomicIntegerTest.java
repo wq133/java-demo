@@ -1,6 +1,5 @@
-package com.example.devDemo.atomicclass;
+package com.example.devDemo.atomicdemo;
 
-import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
