@@ -10,7 +10,7 @@ public class CompletableFutureDemo {
     private static final ThreadPoolExecutor executor = new ThreadPoolExecutor(10, 10, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>());
 
     /**
-     *  ThreadPoolExecutor   的invokeAny方法
+     *  ThreadPoolExecutor   的invokeAny方法 test
      *  invokeAny(Collection<? extends Callable<T>> tasks):
      *  执行给定的任务集合，返回一个已经成功完成的任务的结果（如果有多个任务成功，则返回其中一个的结果）。
      *  一旦某个任务成功完成，取消所有其他任务。
