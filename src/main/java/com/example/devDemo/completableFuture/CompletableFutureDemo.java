@@ -16,7 +16,7 @@ public class CompletableFutureDemo {
      *  一旦某个任务成功完成，取消所有其他任务。
      *
      */
-    public static void main6(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
         ExecutorService executor = Executors.newFixedThreadPool(2);
 
         List<Callable<String>> tasks = Arrays.asList(

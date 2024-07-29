@@ -69,7 +69,6 @@ public class OptionalDemo {
             <U> Optional<U> flatMap(Function<? super T, Optional<U>> mapper) ：与map类似，要求返回值必须是Optional。
         */
 
-
         Student student1 = Student.builder()
                 .id(GenerateUUID.generate())
                 .age(18)
