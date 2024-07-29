@@ -16,7 +16,7 @@ public class CompletableFutureDemo {
      *  一旦某个任务成功完成，取消所有其他任务。
      *
      */
-    public static void main(String[] args) throws Exception {
+    public static void main6(String[] args) throws Exception {
         ExecutorService executor = Executors.newFixedThreadPool(2);
 
         List<Callable<String>> tasks = Arrays.asList(
@@ -208,6 +208,56 @@ public class CompletableFutureDemo {
             System.out.println("wait, in loading-------------------");
         }
         System.out.println("total = " + total);
+    }
+
+    /**
+     * CompletableFuture方法应用：
+     * supplyAsync(() -> } {})方法
+     * thenRun 方法:
+     *      thenRun(Runnable action): 在当前任务完成后，同步地运行给定的 Runnable 任务。
+     *      thenRunAsync(Runnable action): 在当前任务完成后，异步地运行给定的 Runnable 任务。默认情况下，它使用公共的 ForkJoin 池来运行任务。
+     *      thenRunAsync(Runnable action, Executor executor): 在当前任务完成后，使用指定的 Executor 异步地运行给定的 Runnable 任务。
+     *
+     * 自定义线程池执行:
+     *      executor
+     *
+     */
+    public static void main(String[] args) {
+        AtomicLong total = new AtomicLong();
+
+        CompletableFuture<Void> future1 = CompletableFuture.runAsync(() -> {
+            try {
+                int nextInt = 10;
+                total.addAndGet((long) nextInt);
+                Thread.sleep(1000);
+                total.addAndGet(1L);
+                System.out.println("future1 ------------- isDone ");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }, executor);
+
+        CompletableFuture<Void> future2 = CompletableFuture.runAsync(() -> {
+            try {
+                int nextInt = 20;
+                total.addAndGet((long) nextInt);
+                Thread.sleep(3000);
+                total.addAndGet(3L);
+                System.out.println("future2 ------------- isDone ");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }, executor);
+
+        CompletableFuture<Void> allOf = CompletableFuture.allOf(future1, future2);
+//        while (!allOf.isDone()) {
+//        }
+
+        allOf.thenRun(() -> {
+            System.out.println("total = " + total);
+            allOf.join();
+            executor.shutdown();
+        });
     }
 
 }
