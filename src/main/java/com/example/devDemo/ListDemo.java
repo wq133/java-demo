@@ -1,6 +1,7 @@
 package com.example.devDemo;
 
 import com.alibaba.fastjson2.JSON;
+import com.example.devDemo.entity.Role;
 import com.example.devDemo.entity.Student;
 
 import java.util.*;
@@ -9,7 +10,48 @@ import java.util.stream.Collectors;
 
 public class ListDemo {
 
-          public static void main(String[] args) {
+    public static void main(String[] args) {
+
+        // 模拟分批查询
+//        List<Student> list1 = new ArrayList<>();
+//        list1.add(new Student("1", "张1", 18, Role.normal));
+//        list1.add(new Student("2", "张2", 19, Role.normal));
+//        list1.add(new Student("3", "张三", 10, Role.normal));
+//        list1.add(new Student("4", "张4", 22, Role.normal));
+//        list1.add(new Student("5", "张5", 23, Role.normal));
+//        list1.add(new Student("6", "张6", 25, Role.normal));
+//        list1.add(new Student("7", "张7", 28, Role.normal));
+//        System.out.println("list1.get(0) = " + list1.get(0));
+//
+//        int limitCount = 2;
+//        double limitPart = Math.ceil((double) list1.size() / limitCount);
+//        List<Student> studentsOne = new ArrayList<>();
+//        if (limitPart > 1) {
+//            for (int i = 0; i < limitPart; i++) {
+//                // 计算当前页的开始和结束索引
+//                int start = i * limitCount;
+//                int end = Math.min(start + limitCount, list1.size());
+//                System.out.println("start = " + start + ", end = " + end);
+//                // 获取当前页的数据子集
+//                List<Student> sublist = list1.subList(start, end);
+//                System.out.println("Page " + (i + 1) + ": " + sublist);
+//                // 查询
+//            }
+//        } else {
+//            studentsOne = list1.subList(0, list1.size());
+//            System.out.println("students situation two = " + studentsOne);
+//        }
+
+        // demo-----------------------------------------------------------------
+//          List<Student> collect = list1.stream().collect(Collectors.toList());
+//          System.out.println("collect = " + collect);
+//          Map<String, List<Student>> collect1 = collect.stream().collect(Collectors.groupingBy(Student::getId));
+//          List<Student> students = collect1.get("1");
+//          List<Student> student2 = collect1.get("2");
+//          System.out.println("students = " + students);
+//          System.out.println("student2 = " + student2);
+
+
 //        List<Student> students = new ArrayList<>();
 //
 //        Random random = new Random();
@@ -95,10 +137,10 @@ public class ListDemo {
 //                    System.out.println("奇数的平方值按降序排列后为：" + oddSquaresDesc);
 
 
-              List<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<>();
 
-              list.add(null);
-              System.out.println("list = " + list);
+        list.add(null);
+        System.out.println("list = " + list);
 
-          }
+    }
 }
