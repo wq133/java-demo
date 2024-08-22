@@ -1,9 +1,12 @@
 package com.example.devDemo;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.example.devDemo.entity.Student;
+import org.springframework.util.CollectionUtils;
+
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.stream.Collectors;
 
 
 /**
@@ -27,23 +30,56 @@ import java.util.concurrent.atomic.AtomicReference;
  */
 public class publicdemo {
 
-          public static void main(String[] args) {
-                    method(null);
-          }
+    public static void main(String[] args) {
 
-          public static void method(String param) {
-                    switch (param) {
-                              // 肯定不是进入这里
-                              case "sth":
-                                        System.out.println("it's sth");
-                                        break;
-                              // 也不是进入这里
-                              case "null":
-                                        System.out.println("it's null");
-                                        break;
-                              // 也不是进入这里
-                              default:
-                                        System.out.println("default");
-                    }
-          }
+
+        List<String> words = Arrays.asList("apple", "banana", "orange", "kiwi");
+
+        boolean anyContainsA = words.stream()
+                .anyMatch(word -> word.contains("ange"));
+
+        System.out.println("Any word contains 'a'? " + anyContainsA);
+
+        List<String> collect = words.stream().filter(o -> "ange".equals(o)).collect(Collectors.toList());
+        if (CollectionUtils.isEmpty(collect)){
+            System.out.println("collect is null" );
+        };
+        List<String> arrayList = new ArrayList<>();
+        collect.addAll(arrayList);
+        System.out.println("collect = " + collect);
+    }
+
+    public static void main3(String[] args) {
+//                    method(null);
+
+        Calendar instance = Calendar.getInstance();
+        instance.setTime(new Date());
+        instance.add(Calendar.HOUR, -(Integer.parseInt("24")));
+        Date time = instance.getTime();
+        // 时间戳
+        System.out.println("time = " + time.getTime());
+
+        Map<String, Map<String, List<Student>>> testMap = new HashMap<>();
+        Map<String, List<Student>> testingMap  = new HashMap<>();
+        List<Student> students = new ArrayList<>();
+        testingMap.put("1",students);
+        testMap.put("1", testingMap);
+        System.out.println("testMap = " + testMap);
+    }
+
+    public static void method(String param) {
+        switch (param) {
+            // 肯定不是进入这里
+            case "sth":
+                System.out.println("it's sth");
+                break;
+            // 也不是进入这里
+            case "null":
+                System.out.println("it's null");
+                break;
+            // 也不是进入这里
+            default:
+                System.out.println("default");
+        }
+    }
 }

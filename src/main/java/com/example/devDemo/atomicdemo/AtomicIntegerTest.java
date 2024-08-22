@@ -1,5 +1,7 @@
 package com.example.devDemo.atomicdemo;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -32,8 +34,16 @@ public class AtomicIntegerTest {
            * @param args
            */
           public static void main(String[] args) {
+
+                    Map<String, AtomicInteger> map = new HashMap<>();
+                    map.put("test",new AtomicInteger(0));
                     // 初始化 AtomicInteger 对象，初始值为 0
-                    AtomicInteger atomicInt = new AtomicInteger(0);
+                    AtomicInteger atomicInt = map.get("test");
+
+                    int i = atomicInt.addAndGet(1);
+                    System.out.println("i = " + i);
+                    System.out.println("atomicInt = " + atomicInt);
+                    System.out.println("map = " + map.toString());
 
                     // 使用 getAndSet 方法获取当前值，并设置新值为 3
                     int tempValue = atomicInt.getAndSet(3);
