@@ -34,36 +34,36 @@ public class publicdemo {
 
     public static void main(String[] args) {
 
-            AtomicLong total = new AtomicLong();
-
-            CompletableFuture<Void> future1 = CompletableFuture.runAsync(() -> {
-                try {
-                    int nextInt = 10;
-                    total.addAndGet((long) nextInt);
-                    Thread.sleep(1000);
-                    total.addAndGet(1L);
-                    System.out.println("future1 ------------- isDone ");
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            });
-
-            CompletableFuture<Void> future2 = CompletableFuture.runAsync(() -> {
-                try {
-                    int nextInt = 20;
-                    total.addAndGet((long) nextInt);
-                    Thread.sleep(3000);
-                    total.addAndGet(3L);
-                    System.out.println("future2 ------------- isDone ");
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            });
-
-            CompletableFuture<Void> allOf = CompletableFuture.allOf(future1, future2);
-
-            allOf.join();
-            System.out.println("total = " + total);
+//            AtomicLong total = new AtomicLong();
+//
+//            CompletableFuture<Void> future1 = CompletableFuture.runAsync(() -> {
+//                try {
+//                    int nextInt = 10;
+//                    total.addAndGet((long) nextInt);
+//                    Thread.sleep(1000);
+//                    total.addAndGet(1L);
+//                    System.out.println("future1 ------------- isDone ");
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            });
+//
+//            CompletableFuture<Void> future2 = CompletableFuture.runAsync(() -> {
+//                try {
+//                    int nextInt = 20;
+//                    total.addAndGet((long) nextInt);
+//                    Thread.sleep(3000);
+//                    total.addAndGet(3L);
+//                    System.out.println("future2 ------------- isDone ");
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            });
+//
+//            CompletableFuture<Void> allOf = CompletableFuture.allOf(future1, future2);
+//
+//            allOf.join();
+//            System.out.println("total = " + total);
 
 
 //        List<String> words = Arrays.asList("apple", "banana", "orange", "kiwi");
