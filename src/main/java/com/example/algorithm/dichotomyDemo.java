@@ -4,6 +4,19 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.stream.Collectors;
 
+/**
+ * 二分查找
+ * 时间复杂度为 O(log(n))
+ *
+ * 理解：查找n次 每次都是 n/2的折半查询，查询k次
+ *
+ * ∵存在 n/2^k = 1 就是查询到最后一个元素才是我们需要的元素。
+ *  ∴ k = log2 (n)
+ * 又∵ 忽略常数
+ *  ∴ 二分查找的 时间复杂度为 O(log(n))
+ *
+ *  参考链接：https://blog.csdn.net/weixin_42001592/article/details/128963283
+ */
 public class dichotomyDemo {
 
     public static void main(String[] args) {
@@ -21,7 +34,7 @@ public class dichotomyDemo {
     }
 
     /**
-     * 二分查找算法实现。
+     * 二分查找算法实现
      *
      * @param arr    已排序的整型数组
      * @param target 要查找的目标值
@@ -36,12 +49,11 @@ public class dichotomyDemo {
             if (arr[mid] == target) {
                 return mid; // 找到了目标值，返回其索引
             } else if (arr[mid] < target) {
-                left = mid + 1; // 在右半部分继续查找
+                left = mid + 1; // 左方指针 在右半部分继续查找
             } else {
-                right = mid - 1; // 在左半部分继续查找
+                right = mid - 1; // 右方指针 在左半部分继续查找
             }
         }
-
         return -1; // 没有找到目标值
     }
 
