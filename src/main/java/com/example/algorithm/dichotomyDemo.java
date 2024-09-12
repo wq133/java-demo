@@ -1,6 +1,24 @@
 package com.example.algorithm;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.stream.Collectors;
+
 public class dichotomyDemo {
+
+    public static void main(String[] args) {
+        int[] intArry = {1, 2, 3, 7, 5, 9, 6, 5, 0, 22};
+        // 排序
+        intArry = Arrays.stream(intArry)
+                .boxed()  // 将 int[] 转换为 Integer[]，因为 Comparator 用于引用类型
+                .sorted(Comparator.naturalOrder())
+                .mapToInt(Integer::intValue)
+                .toArray();
+        System.out.println("intArry.toString() = " + Arrays.stream(intArry).boxed().collect(Collectors.toList()));
+        // 索引 0-10
+        int i = binarySearch(intArry, 22);
+        System.out.println("i = " + i);
+    }
 
     /**
      * 二分查找算法实现。
