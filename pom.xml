@@ -58,6 +58,18 @@
         <!--        </dependency>-->
 
         <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.9.0</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
@@ -76,6 +88,7 @@
             <artifactId>spring-session-data-redis</artifactId>
             <version>1.2.1.RELEASE</version>
         </dependency>
+
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>

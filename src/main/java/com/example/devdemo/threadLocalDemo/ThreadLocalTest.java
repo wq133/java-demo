@@ -1,4 +1,4 @@
-package com.example.devdemo.threadLocal;
+package com.example.devdemo.threadLocalDemo;
 
 import org.springframework.boot.web.servlet.server.Session;
 

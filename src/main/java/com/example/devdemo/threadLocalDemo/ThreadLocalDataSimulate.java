@@ -1,4 +1,4 @@
-package com.example.devdemo.threadLocal;
+package com.example.devdemo.threadLocalDemo;
 
 public class ThreadLocalDataSimulate {
 
