@@ -8,7 +8,11 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
+/**
+ *
+ *
+ *
+ */
 public class CompletableFutureDemo {
 
           private static final ThreadPoolExecutor executor = new ThreadPoolExecutor(10, 10, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>());
@@ -86,8 +90,7 @@ public class CompletableFutureDemo {
 
 
           /**
-           * 场景3：
-           * 异常处理：
+           * 场景3： 异常处理：
            * public <U> CompletableFuture<U> handle(BiFunction<? super T, Throwable, ? extends U> fn)}
            * <p>
            * public <U> CompletableFuture<U> handleAsync(BiFunction<? super T, Throwable, ? extends U> fn)
@@ -129,8 +132,7 @@ public class CompletableFutureDemo {
           }
 
           /**
-           * 场景2：
-           * 自定义线程池执行批量插入/更新/删除操作
+           * 场景2：自定义线程池       执行批量插入/更新/删除操作
            * <p>
            * CompletableFuture方法应用：
            * join()方法:           等待任务完成: 使用 join() 方法等待任务完成。
