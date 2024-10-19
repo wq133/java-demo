@@ -14,18 +14,19 @@ import java.util.Optional;
 @NoArgsConstructor
 @Builder
 @Data
+// 用于生成链式调用的 getter 和 setter 方法。
 @Accessors(chain = true)
 public class Student implements Serializable {
 
-    public String id;
+          public String id;
 
-    public String name;
+          public String name;
 
-    public Integer age;
+          public Integer age;
 
-    public Role role;
+          public Role role;
 
-    public Optional<Role> optionalRole(){
-        return Optional.ofNullable(role);
-    }
+          public Optional<Role> optionalRole() {
+                    return Optional.ofNullable(role);
+          }
 }
