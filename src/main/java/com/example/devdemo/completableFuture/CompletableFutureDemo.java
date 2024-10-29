@@ -6,7 +6,7 @@ import com.example.devdemo.entity.Student;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicLong;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+//import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  *
@@ -110,7 +110,7 @@ public class CompletableFutureDemo {
                                         return result != null ? result : "a Running Exception!";
                               });
                               // 断言捕获异常 前后对应
-                              assertEquals("a Running Exception!", future.get());
+//                              assertEquals("a Running Exception!", future.get());
 
                               CompletableFuture<String> future2
                                       = CompletableFuture.supplyAsync(() -> {
@@ -124,7 +124,7 @@ public class CompletableFutureDemo {
                               });
 
                               // 断言捕获异常抛出的world 前后对应
-                              assertEquals("world!", future.get());
+//                              assertEquals("world!", future.get());
 
                     } catch (Exception e) {
                               throw new RuntimeException(e);

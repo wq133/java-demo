@@ -26,7 +26,11 @@ public class Student implements Serializable {
 
           public Role role;
 
-          public Optional<Role> optionalRole() {
-                    return Optional.ofNullable(role);
-          }
+    public Optional<Role> optionalRole(){
+        return Optional.ofNullable(role);
+    }
+
+    public String getLocalDress(){
+        return "localDressTest";
+    }
 }

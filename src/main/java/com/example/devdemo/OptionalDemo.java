@@ -69,35 +69,35 @@ public class OptionalDemo {
             <U> Optional<U> flatMap(Function<? super T, Optional<U>> mapper) ：与map类似，要求返回值必须是Optional。
         */
 
-        Student student1 = Student.builder()
-                .id(GenerateUUID.generate())
-                .age(18)
-                .name(null)
-                .role(Role.normal)
-                .build();
-        Student student2 = Student.builder()
-                .id(GenerateUUID.generate())
-                .age(18)
-                .name("赵烬彦2")
-                .build();
-        List<Student> list = new ArrayList<>();
-        list.add(student1);
-        list.add(student2);
-        //map
-        String studentName = Optional.of(student2).map(Student::getName).get();
-        System.out.println("student2Name：" + studentName);
-
-        Optional<String> optionalStudentName = Optional.ofNullable(student1)
-                .map(Student::getName);
-        System.out.println("optionalStudentName：" + optionalStudentName.equals(emptyOptional));
-
-
-        //flatMap
-        String description = Optional.of(student1)
-                .flatMap(Student::optionalRole)
-                .map(Role::getDescription)
-                .get();
-        System.out.println("description：" + description);
+//        Student student1 = Student.builder()
+//                .id(GenerateUUID.generate())
+//                .age(18)
+//                .name(null)
+//                .role(Role.normal)
+//                .build();
+//        Student student2 = Student.builder()
+//                .id(GenerateUUID.generate())
+//                .age(18)
+//                .name("赵烬彦2")
+//                .build();
+//        List<Student> list = new ArrayList<>();
+//        list.add(student1);
+//        list.add(student2);
+//        //map
+//        String studentName = Optional.of(student2).map(Student::getName).get();
+//        System.out.println("student2Name：" + studentName);
+//
+//        Optional<String> optionalStudentName = Optional.ofNullable(student1)
+//                .map(Student::getName);
+//        System.out.println("optionalStudentName：" + optionalStudentName.equals(emptyOptional));
+//
+//
+//        //flatMap
+//        String description = Optional.of(student1)
+//                .flatMap(Student::optionalRole)
+//                .map(Role::getDescription)
+//                .get();
+//        System.out.println("description：" + description);
     }
 }
 
