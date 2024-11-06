@@ -8,7 +8,8 @@ public class demo01 {
 
     // 风格指南
     public static void main(String[] args) {
-       // Java 最重要的特性之一是所有变量和表达式都有一个所谓的static type。Java 变量可以包含该类型的值，
+
+        // Java 最重要的特性之一是所有变量和表达式都有一个所谓的static type。Java 变量可以包含该类型的值，
        // 并且只能包含该类型的值。此外，变量的类型永远不会改变。
 
         // java是一个强类型语言 不像python是一个动态类型的

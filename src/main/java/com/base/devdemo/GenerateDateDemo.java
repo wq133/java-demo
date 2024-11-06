@@ -10,14 +10,14 @@ import java.util.Random;
  */
 public class GenerateDateDemo {
 
-    public static void main5(String[] args) {
+    public static void main(String[] args) {
         // 随机生成255个字母
         String randomString = generateRandomLetterString(255);
         System.out.println(randomString);
 
         // 生成指定长度的基础字符串
         String randomString2 = generateTestString(255);
-        System.out.println(randomString);
+        System.out.println(randomString2);
 
 
     }
