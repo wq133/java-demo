@@ -1,4 +1,4 @@
-package com.base.devdemo;
+package com.base.devdemo.utils;
 
 //import org.junit.Test;
 //import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -13,8 +13,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-
-@Component
+/**
+ * 1、在springBoot项目中打开注释
+ * 2、 测试类/ 项目中注入这个ScheduledTask
+ * 3、运行容器，等待定时任务执行即可
+ */
+//@Component
 public class ScheduledTask {
 
     // 2024版：
@@ -77,8 +81,8 @@ public class ScheduledTask {
 
 }
 
-@Configuration
-@EnableScheduling
+//@Configuration
+//@EnableScheduling
 class ScheduledTaskConfigTest {
 
 }

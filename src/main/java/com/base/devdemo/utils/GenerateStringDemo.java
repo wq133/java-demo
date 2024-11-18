@@ -1,4 +1,4 @@
-package com.base.devdemo;
+package com.base.devdemo.utils;
 
 import java.util.Random;
 
@@ -8,7 +8,7 @@ import java.util.Random;
  * 如 varchar 255
  *
  */
-public class GenerateDateDemo {
+public class GenerateStringDemo {
 
     public static void main(String[] args) {
         // 随机生成255个字母

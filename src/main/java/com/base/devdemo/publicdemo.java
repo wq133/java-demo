@@ -27,11 +27,29 @@ public class publicdemo {
         // stream流-anyMatch 用法
 //        listStreamAnyMatchDemo();
 
+//        hyfCppDemo();
     }
 
     /**
-     * stream流-anyMatch 用法
+     * 寒云峰 cppdemo
      */
+    private static void hyfCppDemo() {
+//        int a =  48;
+//        switch (a){
+//            case "0":
+//                System.out.println("1" );
+//                break;
+//            case true:
+//                System.out.println("2");
+//                break;
+//            default:
+//                System.out.println("???");
+//        }
+    }
+
+        /**
+         * stream流-anyMatch 用法
+         */
     private static void listStreamAnyMatchDemo() {
 
         // stream流-anyMatch
